@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('naziv');
-            $table->text('opis')->nullable();
-            $table->decimal('cijena', 10, 2);
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->decimal('price', 10, 2)->nullable();
             $table->text('obavljeni_poslovi')->nullable();
-            $table->date('datum_pocetka');
-            $table->date('datum_zavrsetka')->nullable();
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
             $table->timestamps();
         });
     }
