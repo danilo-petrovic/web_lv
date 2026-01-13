@@ -1,0 +1,16 @@
+<h1><%= project.naziv %></h1>
+
+<p><b>Opis:</b> <%= project.opis %></p>
+<p><b>Cijena:</b> <%= project.cijena %></p>
+<p><b>Poslovi:</b> <%= project.poslovi %></p>
+<p><b>Datum početka:</b> <%= project.datumPocetka %></p>
+<p><b>Datum završetka:</b> <%= project.datumZavrsetka %></p>
+
+<h3>Članovi tima:</h3>
+<ul>
+  <% project.clanovi.forEach(c => { %>
+    <li><%= c %></li>
+  <% }) %>
+</ul>
+
+<a href="/projects">Nazad</a>

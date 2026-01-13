@@ -1,0 +1,13 @@
+<h1>Uredi projekt</h1>
+
+<form method="POST" action="/projects/edit/<%= project._id %>">
+  Naziv: <input name="naziv" value="<%= project.naziv %>"><br>
+  Opis: <input name="opis" value="<%= project.opis %>"><br>
+  Cijena: <input name="cijena" value="<%= project.cijena %>"><br>
+  Poslovi: <input name="poslovi" value="<%= project.poslovi %>"><br>
+  Datum početka: <input type="date" name="datumPocetka"><br>
+  Datum završetka: <input type="date" name="datumZavrsetka"><br>
+  Članovi (zarez): <input name="clanovi" value="<%= project.clanovi.join(',') %>"><br>
+
+  <button>Spremi</button>
+</form>

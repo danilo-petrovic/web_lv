@@ -1,0 +1,15 @@
+<h1>Projekti</h1>
+
+<a href="/projects/new">Novi projekt</a>
+
+<ul>
+  <% projects.forEach(p => { %>
+    <li>
+      <b><%= p.naziv %></b> - <%= p.cijena %> €
+
+      <a href="/projects/<%= p._id %>">Detalji</a>
+      <a href="/projects/edit/<%= p._id %>">Uredi</a>
+      <a href="/projects/delete/<%= p._id %>">Obriši</a>
+    </li>
+  <% }) %>
+</ul>
